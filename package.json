@@ -15,7 +15,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "archive-storybook": "archive-storybook",
-    "build-archive-storybook": "build-archive-storybook"
+    "build-archive-storybook": "build-archive-storybook",
+    "chromatic": "npx chromatic --build-script-name=build-archive-storybook -t=chpt_a58770c4dd83d4f --exit-once-uploaded"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +46,7 @@
     "chromatic": "^6.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "fire-season@0.1.0"
 }
