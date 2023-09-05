@@ -12,7 +12,7 @@ test('haz title', async ({ page }) => {
   await page.goto('https://www.chromatic.com');
 
   // Expect a title "to contain" a substring.
-  await expect(page.getByRole('link', { name: 'Get started now' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Schedule live demo' })).toBeVisible();
 });
 
 // test('get started link', async ({ page }) => {
