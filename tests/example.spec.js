@@ -15,6 +15,13 @@ test('haz title', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Schedule live demo' })).toBeVisible();
 });
 
+test('haz something else', async ({ page }) => {
+  await page.goto('https://www.chromatic.com');
+
+  // Expect a title "to contain" a substring.
+  await expect(page.getByRole('link', { name: 'Learn about publishing' })).toBeVisible();
+});
+
 // test('get started link', async ({ page }) => {
 //   await page.goto('https://playwright.dev/');
 

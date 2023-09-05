@@ -25,7 +25,7 @@ jobs:
 
       # 👇 Run your E2E tests *before* running Chromatic for your E2E test archives
       - name: E2E tests
-        run: yarn playwright test
+        run: npx playwright test
 
       # 👇 Run Chromatic for your E2E test archives
       - name: Publish E2E Archives to Chromatic
