@@ -1,11 +1,18 @@
 // @ts-check
 const { test, expect } = require('@chromaui/test-archiver')
 
-test('has title', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+// test('has title', async ({ page }) => {
+//   await page.goto('http://localhost:3000');
+
+//   // Expect a title "to contain" a substring.
+//   await expect(page.getByRole('link', { name: 'Learn React' })).toBeVisible();
+// });
+
+test('haz title', async ({ page }) => {
+  await page.goto('https://www.chromatic.com');
 
   // Expect a title "to contain" a substring.
-  await expect(page.getByRole('link', { name: 'Learn React' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Get started now' })).toBeVisible();
 });
 
 // test('get started link', async ({ page }) => {
