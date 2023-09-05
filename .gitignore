@@ -25,4 +25,4 @@ yarn-error.log*
 /playwright-report/
 /playwright/.cache/
 
-/storybook-static
+/storybook-static/
