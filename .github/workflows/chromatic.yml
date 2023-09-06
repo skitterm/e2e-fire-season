@@ -10,7 +10,7 @@ on: push
 jobs:
   chromatic-deployment:
     # Operating System
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
      # For instance in our GitHub action:
     steps:
       - name: Checkout repository
