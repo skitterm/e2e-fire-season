@@ -35,3 +35,4 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           # 👇 Tell Chromatic to build the Archive Storybook
           buildScriptName: build-archive-storybook
+          exitOnceUploaded: true
