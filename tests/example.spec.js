@@ -22,6 +22,12 @@ test('haz something else', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Learn about publishing' })).toBeVisible();
 });
 
+test('has some title', async ({ page }) => {
+  await page.goto('https://www.chromatic.com');
+
+  await expect(page.getByText('Ready to merge!')).toBeVisible();
+});
+
 // test('get started link', async ({ page }) => {
 //   await page.goto('https://playwright.dev/');
 
