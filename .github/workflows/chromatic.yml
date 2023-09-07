@@ -14,21 +14,18 @@ jobs:
      # For instance in our GitHub action:
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           fetch-depth: 0
       - name: Install dependencies
         run: yarn
-
-      # 👇 Run Chromatic as normal for your Storybook
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
       # 👇 Run your E2E tests *before* running Chromatic for your E2E test archives
       - name: E2E tests
-        run: yarn playwright test
+        run: npx playwright test --workers=1
 
       # 👇 Run Chromatic for your E2E test archives
       - name: Publish E2E Archives to Chromatic
@@ -38,3 +35,4 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           # 👇 Tell Chromatic to build the Archive Storybook
           buildScriptName: build-archive-storybook
+          exitOnceUploaded: true
