@@ -25,5 +25,5 @@ yarn-error.log*
 /playwright-report/
 /playwright/.cache/
 
-/storybook-static/
-/test-archives/
+/storybook-static
+/test-archives

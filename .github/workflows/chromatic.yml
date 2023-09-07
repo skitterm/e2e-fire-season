@@ -27,6 +27,9 @@ jobs:
       - name: E2E tests
         run: npx playwright test --workers=1
 
+      - name: See Archive Files
+        run: ls -L test-archives/latest
+
       # 👇 Run Chromatic for your E2E test archives
       - name: Publish E2E Archives to Chromatic
         uses: chromaui/action@v1
